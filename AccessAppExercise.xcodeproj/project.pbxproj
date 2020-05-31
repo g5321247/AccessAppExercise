@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C882DFEC2483FD8200C208A2 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C882DFEB2483FD8200C208A2 /* UITableViewExtension.swift */; };
 		C882DFEF2483FE6800C208A2 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C882DFEE2483FE6800C208A2 /* UIViewExtension.swift */; };
+		C882DFF2248407C800C208A2 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C882DFF1248407C800C208A2 /* UIColorExtension.swift */; };
 		C8EF5CD92483DC0800CA9197 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EF5CD82483DC0800CA9197 /* AppDelegate.swift */; };
 		C8EF5CDB2483DC0800CA9197 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EF5CDA2483DC0800CA9197 /* SceneDelegate.swift */; };
 		C8EF5CDD2483DC0800CA9197 /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EF5CDC2483DC0800CA9197 /* UserListViewController.swift */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		C882DFEB2483FD8200C208A2 /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		C882DFEE2483FE6800C208A2 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		C882DFF1248407C800C208A2 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		C8EF5CD52483DC0800CA9197 /* AccessAppExercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccessAppExercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8EF5CD82483DC0800CA9197 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8EF5CDA2483DC0800CA9197 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,8 +86,9 @@
 		C882DFE92483FD5A00C208A2 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				C882DFED2483FE2B00C208A2 /* UIView */,
+				C882DFF0248407B600C208A2 /* UIColor */,
 				C882DFEA2483FD6200C208A2 /* UITableView */,
+				C882DFED2483FE2B00C208A2 /* UIView */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -104,6 +107,14 @@
 				C882DFEE2483FE6800C208A2 /* UIViewExtension.swift */,
 			);
 			path = UIView;
+			sourceTree = "<group>";
+		};
+		C882DFF0248407B600C208A2 /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				C882DFF1248407C800C208A2 /* UIColorExtension.swift */,
+			);
+			path = UIColor;
 			sourceTree = "<group>";
 		};
 		C8EF5CCC2483DC0800CA9197 = {
@@ -208,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C882DFEF2483FE6800C208A2 /* UIViewExtension.swift in Sources */,
+				C882DFF2248407C800C208A2 /* UIColorExtension.swift in Sources */,
 				C8EF5CDD2483DC0800CA9197 /* UserListViewController.swift in Sources */,
 				C882DFEC2483FD8200C208A2 /* UITableViewExtension.swift in Sources */,
 				C8EF5CF02483DDF300CA9197 /* UserTableViewCell.swift in Sources */,
