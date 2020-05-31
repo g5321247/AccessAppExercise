@@ -11,6 +11,7 @@
 		C882DFEF2483FE6800C208A2 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C882DFEE2483FE6800C208A2 /* UIViewExtension.swift */; };
 		C882DFF2248407C800C208A2 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C882DFF1248407C800C208A2 /* UIColorExtension.swift */; };
 		C882DFF8248410E500C208A2 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C882DFF7248410E500C208A2 /* NetworkingError.swift */; };
+		C882E0012484155E00C208A2 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C882E0002484155E00C208A2 /* Constant.swift */; };
 		C8EF5CD92483DC0800CA9197 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EF5CD82483DC0800CA9197 /* AppDelegate.swift */; };
 		C8EF5CDB2483DC0800CA9197 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EF5CDA2483DC0800CA9197 /* SceneDelegate.swift */; };
 		C8EF5CDD2483DC0800CA9197 /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EF5CDC2483DC0800CA9197 /* UserListViewController.swift */; };
@@ -26,6 +27,7 @@
 		C882DFEE2483FE6800C208A2 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		C882DFF1248407C800C208A2 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		C882DFF7248410E500C208A2 /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
+		C882E0002484155E00C208A2 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		C8EF5CD52483DC0800CA9197 /* AccessAppExercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccessAppExercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8EF5CD82483DC0800CA9197 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8EF5CDA2483DC0800CA9197 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +137,14 @@
 			path = Error;
 			sourceTree = "<group>";
 		};
+		C882DFFF2484154D00C208A2 /* Unit */ = {
+			isa = PBXGroup;
+			children = (
+				C882E0002484155E00C208A2 /* Constant.swift */,
+			);
+			path = Unit;
+			sourceTree = "<group>";
+		};
 		C8EF5CCC2483DC0800CA9197 = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +169,7 @@
 				C882DFF32484100700C208A2 /* Networking */,
 				C80B01FA2483F4CE000E04E7 /* User List */,
 				C8EF5CDE2483DC0800CA9197 /* Main.storyboard */,
+				C882DFFF2484154D00C208A2 /* Unit */,
 				C882DFE82483FD4D00C208A2 /* Extension */,
 				C80B01F92483F4BC000E04E7 /* Support File */,
 			);
@@ -244,6 +255,7 @@
 				C882DFF8248410E500C208A2 /* NetworkingError.swift in Sources */,
 				C8EF5CF02483DDF300CA9197 /* UserTableViewCell.swift in Sources */,
 				C8EF5CD92483DC0800CA9197 /* AppDelegate.swift in Sources */,
+				C882E0012484155E00C208A2 /* Constant.swift in Sources */,
 				C8EF5CDB2483DC0800CA9197 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
