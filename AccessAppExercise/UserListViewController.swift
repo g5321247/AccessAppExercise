@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class UserListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
@@ -23,7 +23,7 @@ class ViewController: UIViewController {
 }
 
 // MARK: - TableViewDelegate, TableViewDataSource
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
+extension UserListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
