@@ -10,7 +10,12 @@ import UIKit
 
 class UserTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var personalPictureImageView: UIImageView!
+    @IBOutlet weak var personalPictureImageView: UIImageView! {
+        didSet {
+            personalPictureImageView.setCorner(radius: 20, clipsToBounds: true)
+        }
+    }
+
     @IBOutlet weak var personalNameLabel: UILabel!
     @IBOutlet weak var administrationLabel: UILabel!
     @IBOutlet weak var baseViuew: UIView!
