@@ -17,7 +17,6 @@ extension UITableView {
     }
 
     func makeCell<T: UITableViewCell>(indexPath: IndexPath) -> T {
-        print(String(describing: T.self))
         guard let cell = dequeueReusableCell(
                 withIdentifier: String(describing: T.self),
                 for: indexPath
