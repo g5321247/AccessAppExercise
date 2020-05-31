@@ -10,14 +10,19 @@ import UIKit
 
 class UserListViewController: UIViewController {
 
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableView: UITableView! {
+        didSet {
+            tableView.delegate = self
+            tableView.dataSource = self
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.register(UINib(nibName: String(describing: UserTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: UserTableViewCell.self))
+        tableView.register(forCellReuseIdentifiers: [
+            String(describing: UserTableViewCell.self)
+        ])
     }
 
 }
@@ -29,8 +34,7 @@ extension UserListViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: UserTableViewCell.self), for: indexPath) as!
-        UserTableViewCell
+        let cell: UserTableViewCell = tableView.makeCell(indexPath: indexPath)
         return cell
     }
 }
