@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C882DFEC2483FD8200C208A2 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C882DFEB2483FD8200C208A2 /* UITableViewExtension.swift */; };
 		C8EF5CD92483DC0800CA9197 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EF5CD82483DC0800CA9197 /* AppDelegate.swift */; };
 		C8EF5CDB2483DC0800CA9197 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EF5CDA2483DC0800CA9197 /* SceneDelegate.swift */; };
 		C8EF5CDD2483DC0800CA9197 /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EF5CDC2483DC0800CA9197 /* UserListViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C882DFEB2483FD8200C208A2 /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		C8EF5CD52483DC0800CA9197 /* AccessAppExercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccessAppExercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8EF5CD82483DC0800CA9197 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8EF5CDA2483DC0800CA9197 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,30 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		C882DFE82483FD4D00C208A2 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C882DFE92483FD5A00C208A2 /* UIKit */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		C882DFE92483FD5A00C208A2 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				C882DFEA2483FD6200C208A2 /* UITableView */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		C882DFEA2483FD6200C208A2 /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				C882DFEB2483FD8200C208A2 /* UITableViewExtension.swift */,
+			);
+			path = UITableView;
+			sourceTree = "<group>";
+		};
 		C8EF5CCC2483DC0800CA9197 = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +118,7 @@
 				C8EF5CDA2483DC0800CA9197 /* SceneDelegate.swift */,
 				C80B01FA2483F4CE000E04E7 /* User List */,
 				C8EF5CDE2483DC0800CA9197 /* Main.storyboard */,
+				C882DFE82483FD4D00C208A2 /* Extension */,
 				C80B01F92483F4BC000E04E7 /* Support File */,
 			);
 			path = AccessAppExercise;
@@ -170,6 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8EF5CDD2483DC0800CA9197 /* UserListViewController.swift in Sources */,
+				C882DFEC2483FD8200C208A2 /* UITableViewExtension.swift in Sources */,
 				C8EF5CF02483DDF300CA9197 /* UserTableViewCell.swift in Sources */,
 				C8EF5CD92483DC0800CA9197 /* AppDelegate.swift in Sources */,
 				C8EF5CDB2483DC0800CA9197 /* SceneDelegate.swift in Sources */,
