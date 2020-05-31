@@ -17,7 +17,11 @@ class UserTableViewCell: UITableViewCell {
         }
     }
 
-    @IBOutlet weak var personalNameLabel: UILabel!
+    @IBOutlet weak var personalNameLabel: UILabel! {
+        didSet {
+            personalNameLabel.textColor = .gray
+        }
+    }
     @IBOutlet weak var administrationLabel: UILabel! {
         didSet {
             administrationLabel.textColor = .white
