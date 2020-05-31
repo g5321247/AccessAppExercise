@@ -18,7 +18,18 @@ class UserTableViewCell: UITableViewCell {
     }
 
     @IBOutlet weak var personalNameLabel: UILabel!
-    @IBOutlet weak var administrationLabel: UILabel!
+    @IBOutlet weak var administrationLabel: UILabel! {
+        didSet {
+            administrationLabel.textColor = .white
+        }
+    }
+
+    @IBOutlet weak var administrationTextContentView: UIView! {
+        didSet {
+            administrationTextContentView.backgroundColor = #colorLiteral(red: 0.3726159334, green: 0.4244372547, blue: 0.8679901361, alpha: 1)
+            administrationTextContentView.setCorner(radius: 12.5)
+        }
+    }
     @IBOutlet weak var baseViuew: UIView! {
         didSet {
             baseViuew.setBoarder(width: 0.5, color: .lightGray)
