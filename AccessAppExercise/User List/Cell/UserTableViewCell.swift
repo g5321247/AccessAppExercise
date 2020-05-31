@@ -13,7 +13,7 @@ class UserTableViewCell: UITableViewCell {
     @IBOutlet weak var personalPictureImageView: UIImageView! {
         didSet {
             personalPictureImageView.image = UIImage(named: "mockPic")
-            personalPictureImageView.setCorner(radius: 20, clipsToBounds: true)
+            personalPictureImageView.setCorner(radius: 30, clipsToBounds: true)
         }
     }
 
