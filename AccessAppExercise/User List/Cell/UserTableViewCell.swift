@@ -19,7 +19,17 @@ class UserTableViewCell: UITableViewCell {
 
     @IBOutlet weak var personalNameLabel: UILabel!
     @IBOutlet weak var administrationLabel: UILabel!
-    @IBOutlet weak var baseViuew: UIView!
+    @IBOutlet weak var baseViuew: UIView! {
+        didSet {
+            baseViuew.setBoarder(width: 0.5, color: .lightGray)
+            baseViuew.setShadow(
+                opacity: 0.3,
+                radius: 1,
+                color: .shadow,
+                offset: CGSize(width: 0, height: 2.0)
+            )
+        }
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()

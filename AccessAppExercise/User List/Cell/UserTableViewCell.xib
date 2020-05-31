@@ -17,7 +17,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6S2-qM-0LU">
-                        <rect key="frame" x="0.0" y="5" width="347" height="80"/>
+                        <rect key="frame" x="3" y="5" width="341" height="80"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8yE-Os-KMz">
                                 <rect key="frame" x="10" y="10" width="60" height="60"/>
@@ -27,16 +27,16 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QYq-nV-Pxn">
-                                <rect key="frame" x="75" y="19.5" width="257" height="41"/>
+                                <rect key="frame" x="75" y="19.5" width="251" height="41"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2c9-Mf-aUt">
-                                        <rect key="frame" x="0.0" y="0.0" width="257" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="251" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNh-mO-dKE">
-                                        <rect key="frame" x="0.0" y="20.5" width="257" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="20.5" width="251" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -58,10 +58,10 @@
                 </subviews>
                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                 <constraints>
-                    <constraint firstItem="6S2-qM-0LU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="i9X-ce-OUX"/>
+                    <constraint firstItem="6S2-qM-0LU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="3" id="i9X-ce-OUX"/>
                     <constraint firstItem="6S2-qM-0LU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="jV7-Sq-Hnz"/>
                     <constraint firstAttribute="bottom" secondItem="6S2-qM-0LU" secondAttribute="bottom" constant="5" id="lcx-t5-XD4"/>
-                    <constraint firstAttribute="trailing" secondItem="6S2-qM-0LU" secondAttribute="trailing" id="r3c-A8-lkO"/>
+                    <constraint firstAttribute="trailing" secondItem="6S2-qM-0LU" secondAttribute="trailing" constant="3" id="r3c-A8-lkO"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
