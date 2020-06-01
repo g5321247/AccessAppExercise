@@ -46,12 +46,29 @@ class UserListViewController: UIViewController {
 
         outputs.reloadData = { [weak self] in
             self?.tableView.reloadData()
+            self?.tableView.tableFooterView = UIView()
         }
     }
 }
 
 // MARK: - TableViewDelegate, TableViewDataSource
 extension UserListViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(
+        _ tableView: UITableView,
+        willDisplay cell: UITableViewCell,
+        forRowAt indexPath: IndexPath
+    ) {
+        if indexPath.row == viewModel.outputs.users.count - 1,
+            viewModel.outputs.shouldLoadMore {
+            let loadMoreView = LoadMoreView(
+                frame: CGRect(x: 0, y: 0, width: Constant.screenWidth, height: 70)
+            )
+            tableView.tableFooterView = loadMoreView
+            loadMoreView.configure(shouldAnimate: true)
+            viewModel.inputs.downloadUsers()
+        }
+    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.outputs.users.count
     }

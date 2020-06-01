@@ -45,11 +45,13 @@ class UserListViewModel: UserListViewModelInputs, UserListViewModelOutputs {
 
     // MARK: Inputs
     func downloadUsers() {
-        let request = UserListRequest(parameters: .init(since: "0", perPage: "20"))
+        let request = UserListRequest(
+            parameters: .init(since: dependency.startUserID, perPage: dependency.pageSize)
+        )
         service.send(request: request) { (result) in
             switch result {
             case .success(let model, let response):
-                self.users = model
+                self.users.append(contentsOf: model)
                 self.handleHeaderLink(with: response.allHeaderFields["Link"] as? String)
             case .failure(let err):
                 print(err)
