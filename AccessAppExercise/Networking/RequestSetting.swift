@@ -61,7 +61,9 @@ struct URLQueryDataAdapter: RequestAdapter {
 
     func encoded(url: URL) -> URL {
         guard var components = URLComponents(url: url, resolvingAgainstBaseURL: false),
-            parameters.isEmpty else { return url }
+            !parameters.isEmpty else {
+                return url
+        }
         components.queryItems = parameters.map {
             URLQueryItem(name: $0.key, value: $0.value as? String)
         }
