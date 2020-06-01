@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C802079B2484A60C0072521C /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C802079A2484A60C0072521C /* UserListViewModel.swift */; };
 		C802079E2484D3600072521C /* URLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C802079D2484D3600072521C /* URLExtension.swift */; };
+		C836F0882484E6A50045E0F0 /* LoadMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C836F0872484E6A50045E0F0 /* LoadMoreView.swift */; };
 		C882DFEC2483FD8200C208A2 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C882DFEB2483FD8200C208A2 /* UITableViewExtension.swift */; };
 		C882DFEF2483FE6800C208A2 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C882DFEE2483FE6800C208A2 /* UIViewExtension.swift */; };
 		C882DFF2248407C800C208A2 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C882DFF1248407C800C208A2 /* UIColorExtension.swift */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		C802079A2484A60C0072521C /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
 		C802079D2484D3600072521C /* URLExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLExtension.swift; sourceTree = "<group>"; };
+		C836F0872484E6A50045E0F0 /* LoadMoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadMoreView.swift; sourceTree = "<group>"; };
 		C882DFEB2483FD8200C208A2 /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		C882DFEE2483FE6800C208A2 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		C882DFF1248407C800C208A2 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
@@ -101,6 +103,14 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		C836F0862484E6960045E0F0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C836F0872484E6A50045E0F0 /* LoadMoreView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		C882DFE82483FD4D00C208A2 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +175,7 @@
 		C882DFFF2484154D00C208A2 /* Unit */ = {
 			isa = PBXGroup;
 			children = (
+				C836F0862484E6960045E0F0 /* View */,
 				C882E0002484155E00C208A2 /* Constant.swift */,
 			);
 			path = Unit;
@@ -293,6 +304,7 @@
 				C8EF5CF02483DDF300CA9197 /* UserTableViewCell.swift in Sources */,
 				C882E0042484163800C208A2 /* RequestSetting.swift in Sources */,
 				C802079B2484A60C0072521C /* UserListViewModel.swift in Sources */,
+				C836F0882484E6A50045E0F0 /* LoadMoreView.swift in Sources */,
 				C8EF5CD92483DC0800CA9197 /* AppDelegate.swift in Sources */,
 				C882E0012484155E00C208A2 /* Constant.swift in Sources */,
 				C882E00824849B2100C208A2 /* UserModel.swift in Sources */,
