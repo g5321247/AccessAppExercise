@@ -15,6 +15,7 @@ protocol UserListViewModelInputs {
 protocol UserListViewModelOutputs {
     var users: [UserModel] { get }
     var reloadData: (() -> Void)? { get set }
+    var shouldLoadMore: Bool { get }
 }
 
 class UserListViewModel: UserListViewModelInputs, UserListViewModelOutputs {
@@ -24,10 +25,14 @@ class UserListViewModel: UserListViewModelInputs, UserListViewModelOutputs {
     // MARK: - Outputs
     var users: [UserModel] = [] {
         didSet {
+            if users.count >= dependency.limit {
+                shouldLoadMore = false
+            }
             reloadData?()
         }
     }
     var reloadData: (() -> Void)?
+    private(set)var shouldLoadMore: Bool = true
 
     // MARK: - Other properties
     private var dependency: Dependency
@@ -67,6 +72,10 @@ class UserListViewModel: UserListViewModelInputs, UserListViewModelOutputs {
                 return
             }
             dependency.startUserID = startUserID
+        }
+
+        if dictionary["rel=\"last\""] != nil {
+            shouldLoadMore = false
         }
 
     }
