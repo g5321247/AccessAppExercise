@@ -44,7 +44,7 @@ class UserListViewModel: UserListViewModelInputs, UserListViewModelOutputs {
         service.send(request: request) { (result) in
             switch result {
             case .success(let model):
-                print(model.count)
+                self.users = model
             case .failure(let err):
                 print(err)
             }

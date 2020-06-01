@@ -10,27 +10,50 @@ import UIKit
 
 class UserListViewController: UIViewController {
 
+    // MARK: - IB
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             tableView.delegate = self
             tableView.dataSource = self
+            tableView.register(forCellReuseIdentifiers: [
+                String(describing: UserTableViewCell.self)
+            ])
         }
     }
 
+    // MARK: - Other properties
+    let viewModel: UserListViewModel
+
+    required init?(coder: NSCoder) {
+        viewModel = UserListViewModel(dependency: .init(
+            startUserID: 0,
+            pageSize: "20",
+            limit: 100
+        ))
+        super.init(coder: coder)
+    }
+
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tableView.register(forCellReuseIdentifiers: [
-            String(describing: UserTableViewCell.self)
-        ])
+        bindViewModel()
+        viewModel.downloadUsers()
     }
 
+    private func bindViewModel() {
+        var outputs = viewModel.outputs
+
+        outputs.reloadData = { [weak self] in
+            self?.tableView.reloadData()
+        }
+    }
 }
 
 // MARK: - TableViewDelegate, TableViewDataSource
 extension UserListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return viewModel.outputs.users.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
