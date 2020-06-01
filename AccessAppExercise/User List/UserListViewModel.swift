@@ -43,8 +43,9 @@ class UserListViewModel: UserListViewModelInputs, UserListViewModelOutputs {
         let request = UserListRequest(parameters: .init(since: 0, perPage: "20"))
         service.send(request: request) { (result) in
             switch result {
-            case .success(let model):
+            case .success(let model, let response):
                 self.users = model
+                print(response)
             case .failure(let err):
                 print(err)
             }

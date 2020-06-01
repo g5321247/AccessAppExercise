@@ -52,7 +52,7 @@ extension URLSession: Session {}
 protocol NetworkingService {
     func send<Res: Request> (
         request: Res,
-        completion: @escaping (Result<Res.Response, Error>) -> Void
+        completion: @escaping (Result<(Res.Response, HTTPURLResponse), Error>) -> Void
     )
 }
 
@@ -65,7 +65,7 @@ class Client: NetworkingService {
 
     func send<Res: Request>(
         request: Res,
-        completion: @escaping (Result<Res.Response, Error>) -> Void
+        completion: @escaping (Result<(Res.Response, HTTPURLResponse), Error>) -> Void
     ) {
         do {
             var request = request
@@ -89,9 +89,9 @@ class Client: NetworkingService {
         }
     }
 
-    private func handle<Response: Codable, Res: Request>(
+    private func handle<Res: Request>(
         data: Data, response: URLResponse?, request: Res,
-        completion: @escaping (Result<Response, Error>) -> Void
+        completion: @escaping (Result<(Res.Response, HTTPURLResponse), Error>) -> Void
     ) {
         guard let response = response as? HTTPURLResponse else {
             completion(.failure(NetworkingError.responseFaild(reason: .nonHTTPResponse)))
@@ -107,8 +107,8 @@ class Client: NetworkingService {
         }
 
         do {
-            let result = try JSONDecoder().decode(Response.self, from: data)
-            completion(.success(result))
+            let result = try JSONDecoder().decode(Res.Response.self, from: data)
+            completion(.success((result, response)))
         } catch {
             #if DEBUG
             print("parse error: \(error)")
