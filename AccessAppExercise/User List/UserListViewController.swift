@@ -26,7 +26,7 @@ class UserListViewController: UIViewController {
 
     required init?(coder: NSCoder) {
         viewModel = UserListViewModel(dependency: .init(
-            startUserID: 0,
+            startUserID: "0",
             pageSize: "20",
             limit: 100
         ))

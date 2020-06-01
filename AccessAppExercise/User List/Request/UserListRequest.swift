@@ -21,7 +21,7 @@ struct UserListRequest: Request {
     var parameters: Parameter
 
     struct Parameter {
-        let since: Int
+        let since: String
         let perPage: String
     }
 }

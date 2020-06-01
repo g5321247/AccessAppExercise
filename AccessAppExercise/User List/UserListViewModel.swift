@@ -40,24 +40,44 @@ class UserListViewModel: UserListViewModelInputs, UserListViewModelOutputs {
 
     // MARK: Inputs
     func downloadUsers() {
-        let request = UserListRequest(parameters: .init(since: 0, perPage: "20"))
+        let request = UserListRequest(parameters: .init(since: "0", perPage: "20"))
         service.send(request: request) { (result) in
             switch result {
             case .success(let model, let response):
                 self.users = model
-                print(response)
+                self.handleHeaderLink(with: response.allHeaderFields["Link"] as? String)
             case .failure(let err):
                 print(err)
             }
         }
+    }
+
+    private func handleHeaderLink(with link: String?) {
+        guard let link = link else { return }
+        let links = link.components(separatedBy: ",")
+        var dictionary: [String: String] = [:]
+        links.forEach({
+            let components = $0.components(separatedBy:"; ")
+            let cleanPath = components[0].trimmingCharacters(in: CharacterSet(charactersIn: "<>"))
+            dictionary[components[1]] = cleanPath
+        })
+        if let nextPagePath = dictionary["rel=\"next\""] {
+            guard let url = URL(string: nextPagePath),
+                let startUserID = url.queryParameters?["since"] else {
+                return
+            }
+            dependency.startUserID = startUserID
+        }
+
     }
 }
 
 // MARK: - Dependency
 extension UserListViewModel {
     struct Dependency {
-        var startUserID: Int
+        var startUserID: String
         var pageSize: String
         let limit: Int
     }
 }
+
