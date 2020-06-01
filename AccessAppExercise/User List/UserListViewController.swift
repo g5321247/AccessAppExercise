@@ -57,7 +57,10 @@ extension UserListViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let user = viewModel.outputs.users[indexPath.row]
         let cell: UserTableViewCell = tableView.makeCell(indexPath: indexPath)
+
+        cell.configure(with: user.login, pictureStr: user.avatarURL, isAdmin: user.siteAdmin)
         return cell
     }
 }

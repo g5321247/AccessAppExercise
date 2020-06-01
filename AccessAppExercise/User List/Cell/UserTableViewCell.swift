@@ -10,6 +10,7 @@ import UIKit
 
 class UserTableViewCell: UITableViewCell {
 
+    // MARK: - IB
     @IBOutlet weak var personalPictureImageView: UIImageView! {
         didSet {
             personalPictureImageView.image = UIImage(named: "mockPic")
@@ -52,4 +53,12 @@ class UserTableViewCell: UITableViewCell {
         selectionStyle = .none
     }
 
+    func configure(
+        with name: String,
+        pictureStr: String,
+        isAdmin: Bool
+    ) {
+        personalNameLabel.text = name
+        administrationTextContentView.isHidden = !isAdmin
+    }
 }
