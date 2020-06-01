@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C802079B2484A60C0072521C /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C802079A2484A60C0072521C /* UserListViewModel.swift */; };
 		C882DFEC2483FD8200C208A2 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C882DFEB2483FD8200C208A2 /* UITableViewExtension.swift */; };
 		C882DFEF2483FE6800C208A2 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C882DFEE2483FE6800C208A2 /* UIViewExtension.swift */; };
 		C882DFF2248407C800C208A2 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C882DFF1248407C800C208A2 /* UIColorExtension.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C802079A2484A60C0072521C /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
 		C882DFEB2483FD8200C208A2 /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		C882DFEE2483FE6800C208A2 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		C882DFF1248407C800C208A2 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				C882E00624849B0500C208A2 /* Request */,
 				C80B01FB2483F4E1000E04E7 /* Cell */,
 				C8EF5CDC2483DC0800CA9197 /* UserListViewController.swift */,
+				C802079A2484A60C0072521C /* UserListViewModel.swift */,
 			);
 			path = "User List";
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 				C882DFF8248410E500C208A2 /* NetworkingError.swift in Sources */,
 				C8EF5CF02483DDF300CA9197 /* UserTableViewCell.swift in Sources */,
 				C882E0042484163800C208A2 /* RequestSetting.swift in Sources */,
+				C802079B2484A60C0072521C /* UserListViewModel.swift in Sources */,
 				C8EF5CD92483DC0800CA9197 /* AppDelegate.swift in Sources */,
 				C882E0012484155E00C208A2 /* Constant.swift in Sources */,
 				C882E00824849B2100C208A2 /* UserModel.swift in Sources */,
