@@ -6,6 +6,7 @@
 //  Copyright © 2020 George Liu. All rights reserved.
 //
 
+import Kingfisher
 import UIKit
 
 class UserTableViewCell: UITableViewCell {
@@ -13,7 +14,7 @@ class UserTableViewCell: UITableViewCell {
     // MARK: - IB
     @IBOutlet weak var personalPictureImageView: UIImageView! {
         didSet {
-            personalPictureImageView.image = UIImage(named: "mockPic")
+            personalPictureImageView.image = UIImage(named: "default_user")
             personalPictureImageView.setCorner(radius: 30, clipsToBounds: true)
         }
     }

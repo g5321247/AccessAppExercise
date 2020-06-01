@@ -6,6 +6,6 @@ target 'AccessAppExercise' do
   use_frameworks!
 
   # Pods for AccessAppExercise
-  # pod 'Kingfisher', '~> 5.0'
+  pod 'Kingfisher', '~> 5.0'
 
 end
