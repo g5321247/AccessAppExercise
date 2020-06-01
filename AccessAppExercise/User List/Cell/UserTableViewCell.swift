@@ -60,6 +60,10 @@ class UserTableViewCell: UITableViewCell {
         isAdmin: Bool
     ) {
         personalNameLabel.text = name
+        personalPictureImageView.kf.setImage(
+            with: URL(string: pictureStr),
+            placeholder: UIImage(named: "default_user")
+        )
         administrationTextContentView.isHidden = !isAdmin
     }
 }
